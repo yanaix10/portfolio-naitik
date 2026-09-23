@@ -1,0 +1,127 @@
+export const siteConfig = {
+  name: "Naitik Yadav",
+  title: "Backend & Systems Enthusiast | Full-Stack Developer",
+  description: "Portfolio website of Naitik Yadav",
+  accentColor: "#6366f1",
+  social: {
+    email: "naitik.yadav641@gmail.com",
+    linkedin: "https://linkedin.com/in/naitikyadav15",
+    twitter: "https://x.com/naitik15dev",
+    github: "https://github.com/yanaix10",
+  },
+  aboutMe:
+    "I am Naitik Yadav, a 3rd-year B.Tech Computer Science & Engineering student at SRM University AP. I love building high-performance web applications, engineering scalable backend architectures, and deep-dive code debugging. Passionate about systems programming and open-source software, I actively contribute to projects like OpenSearch (Linux Foundation / AWS) and develop on Arch Linux as my daily driver.",
+  skills: [
+    "Python",
+    "Go",
+    "C++",
+    "JavaScript",
+    "TypeScript",
+    "Bash",
+    "C",
+    "FastAPI",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "Redis",
+    "Firebase",
+    "React",
+    "Tailwind CSS",
+    "Vite",
+    "HTML5",
+    "CSS3",
+    "Linux",
+    "Docker",
+    "Git",
+    "GitHub",
+    "Postman",
+    "CMake",
+    "Socket.io",
+    "Playwright",
+  ],
+  projects: [
+    {
+      name: "VulnPulse: Distributed DAST Engine",
+      description:
+        "Standalone Dynamic Application Security Testing platform combining a headless browser crawler with concurrent heuristic fuzzers. Features 10+ modular OWASP checks, automated PoC generation, CVSS v3.1 scoring, and a real-time SOC command center dashboard.",
+      link: "https://vulnpulse.vercel.app/",
+      github: "https://github.com/yanaix10/vulnscan",
+      demo: "https://vulnpulse.vercel.app/",
+      skills: ["FastAPI", "Python", "Playwright", "React", "SQLAlchemy"],
+    },
+    {
+      name: "Mini-Redis: Concurrent Key-Value Store",
+      description:
+        "Thread-safe in-memory database built from scratch using POSIX sockets and a custom thread pool to handle concurrent requests. Implements LRU cache eviction, Append-Only File (AOF) crash recovery persistence, and a custom command parser.",
+      link: "https://github.com/yanaix10/mini-redis",
+      github: "https://github.com/yanaix10/mini-redis",
+      demo: null,
+      skills: ["C++", "POSIX Threads", "CMake", "Concurrency", "Sockets"],
+    },
+    {
+      name: "SkillSphere: Real-Time Coding Arena",
+      description:
+        "1v1 competitive coding challenge system with sub-100ms real-time synchronization between peers. Integrated Monaco Editor with Piston API for live sandboxed multi-language code execution and interactive matchmaking lobbies.",
+      link: "https://xskillsphere.vercel.app/",
+      github: "https://github.com/yanaix10/Skill-Sphere-",
+      demo: "https://xskillsphere.vercel.app/",
+      inProgress: true,
+      skills: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
+    },
+    {
+      name: "Doodle.io: Collaborative Canvas Game",
+      description:
+        "Multiplayer real-time drawing and guessing game featuring sub-50ms canvas stroke broadcasting. Built proximity guess matching via Levenshtein distance, automated DoodleBot practice lobbies, and room-based session management.",
+      link: "https://doodle-io-lake.vercel.app/",
+      github: "https://github.com/yanaix10/Doodle.io",
+      demo: "https://doodle-io-lake.vercel.app/",
+      skills: ["React", "Node.js", "Socket.io", "Express", "HTML5 Canvas"],
+    },
+  ],
+  experience: [
+    {
+      company: "OpenSearch (Linux Foundation / AWS)",
+      title: "Open Source Contributor — Go SDK",
+      dateRange: "Nov 2024 - Present",
+      bullets: [
+        "Refactored the OpenSearch Go SDK (opensearchutil) bulk indexing pipeline by replacing a single channel with worker-partitioned channels to eliminate thread contention under heavy workloads",
+        "Implemented deterministic document-level routing using shard hashing (hashValue % NumWorkers), ensuring sequential processing of updates per documentID and preventing out-of-order write conflicts",
+        "Engineered a lock-free round-robin fallback distribution for unkeyed records to maximize worker utilization across multi-core systems",
+      ],
+    },
+    {
+      company: "Chorus & Quepid (OpenSource Connections)",
+      title: "Open Source Contributor — Search Relevance & Tooling",
+      dateRange: "Dec 2024 - Present",
+      bullets: [
+        "Resolved session persistence and User Behavior Insights (UBI) telemetry drops in the Chorus e-commerce search platform by implementing persistent storage synchronization for analytics identifiers",
+        "Modernized legacy search diagnostic interfaces across Quepid and Chorus to React 18, refactoring deprecated protocol routing logic and streamlining multi-container Docker environments",
+        "Contributed to container orchestration and local Docker networking for the test-driven search relevance platform",
+      ],
+    },
+  ],
+  education: [
+    {
+      school: "SRM University, AP",
+      degree: "Bachelor of Technology in Computer Science and Engineering",
+      dateRange: "2024 - 2028",
+      link: "https://www.srmap.edu.in/",
+      achievements: [
+        "Current CGPA: 8.40",
+        "Focused Coursework: Data Structures & Algorithms, Operating Systems, Computer Networks, Database Management Systems, System Design",
+      ],
+    },
+    {
+      school: "VidyaGyan School (CBSE)",
+      degree: "Higher Secondary & Secondary Education",
+      dateRange: "2020 - 2024",
+      link: "https://vidyagyan.in/",
+      achievements: [
+        "Higher Secondary (Class XII): 88.4%",
+        "Secondary School (Class X): 95.4%",
+      ],
+    },
+  ],
+};
