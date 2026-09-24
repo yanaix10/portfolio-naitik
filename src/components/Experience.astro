@@ -5,58 +5,47 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 
 {
   hasExperience && (
-    <section id="experience" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <section id="experience" class="px-6 py-14 sm:px-12 sm:py-16 md:p-16 lg:p-24">
       <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900">
               Experience
             </h2>
             <div
-              class="w-[75px] h-[5px] mt-2 rounded-full"
+              class="w-[60px] sm:w-[75px] h-[4px] sm:h-[5px] mt-2 rounded-full"
               style={`background-color: ${siteConfig.accentColor}`}
             />
           </div>
 
           <div class="lg:col-span-8">
-            <div class="relative">
+            <div class="relative space-y-6 sm:space-y-8">
               {siteConfig.experience.map((exp, index) => (
-                <div class="relative mb-12 last:mb-0">
-                  {/* Timeline dot at top of card */}
-                  <div
-                    class="absolute left-1/2 -top-2 w-4 h-4 bg-white border-2 rounded-full -translate-x-1/2 z-20 transition-all duration-300"
-                    style={`border-color: ${siteConfig.accentColor}; background-color: ${siteConfig.accentColor}`}
-                  />
-
-                  {/* Connecting line below card */}
-                  {index < siteConfig.experience.length - 1 && (
-                    <div class="absolute left-1/2 bottom-0 w-0.5 h-12 bg-gray-300 -translate-x-1/2 translate-y-full z-10" />
-                  )}
-
+                <div class="relative">
                   {/* Experience card */}
-                  <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                  <div class="bg-white rounded-xl shadow-xs border border-gray-200/80 p-5 sm:p-6 md:p-8 hover:shadow-md transition-shadow duration-300">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1.5 sm:gap-4 mb-4">
                       <div>
-                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                        <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900">
                           {exp.title}
                         </h3>
                         <p
-                          class="text-base sm:text-lg"
+                          class="text-sm sm:text-base md:text-lg font-medium mt-0.5"
                           style={`color: ${siteConfig.accentColor}`}
                         >
                           {exp.company}
                         </p>
                       </div>
-                      <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                      <span class="text-xs sm:text-sm text-gray-500 font-mono shrink-0">
                         {exp.dateRange}
                       </span>
                     </div>
 
-                    <ul class="space-y-2">
+                    <ul class="space-y-2.5">
                       {exp.bullets.map((bullet) => (
                         <li class="flex items-start">
-                          <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0" />
-                          <span class="text-sm sm:text-base text-gray-600">
+                          <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-2.5 sm:mr-3 shrink-0" />
+                          <span class="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
                             {bullet}
                           </span>
                         </li>
