@@ -1,0 +1,327 @@
+---
+import { siteConfig } from "../config";
+import { getTechIcon } from "../utils/techIcons";
+
+const contributions = siteConfig.openSourceContributions || [];
+const hasContributions = contributions.length > 0;
+---
+
+{
+  hasContributions && (
+    <section id="opensource" class="px-6 py-14 sm:px-12 sm:py-16 md:p-16 lg:p-24 border-t border-gray-100">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-start">
+          <!-- Left Sticky Sidebar / Heading -->
+          <div class="lg:col-span-4 lg:sticky lg:top-24">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 tracking-tight">
+              Open Source
+            </h2>
+            <div
+              class="w-[60px] sm:w-[75px] h-[4px] sm:h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+            
+            <p class="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed font-sans">
+              Upstream contributions to search engines, distributed SDKs, and developer tooling across 
+              <span class="font-semibold text-gray-800"> Linux Foundation / AWS OpenSearch</span> and 
+              <span class="font-semibold text-gray-800"> OpenSource Connections</span>.
+            </p>
+
+            <!-- GitHub Profile Summary Card -->
+            <div class="mt-6 p-5 rounded-2xl bg-white border border-gray-200 shadow-xs space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="min-w-0">
+                  <p class="text-xs uppercase tracking-wider text-gray-500 font-mono">GitHub Profile</p>
+                  <a
+                    href="https://github.com/yanaix10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm font-bold text-gray-900 hover:text-indigo-600 transition-colors font-mono"
+                  >
+                    @yanaix10 ↗
+                  </a>
+                </div>
+              </div>
+
+              <!-- Quick Metrics Grid -->
+              <div class="grid grid-cols-2 gap-2 pt-2 border-t border-gray-100">
+                <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-100">
+                  <div class="text-xs font-mono text-gray-500">Authored PRs</div>
+                  <div class="text-lg font-bold text-gray-900 font-mono">13+</div>
+                </div>
+                <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-100">
+                  <div class="text-xs font-mono text-gray-500">Repositories</div>
+                  <div class="text-lg font-bold text-gray-900 font-mono">5+ Core</div>
+                </div>
+              </div>
+
+              <a
+                href="https://github.com/yanaix10?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full flex items-center justify-center gap-2 py-2 px-3 text-xs font-medium font-mono text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+              >
+                <span>Browse All Activity</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Contribution Cards -->
+          <div class="lg:col-span-8">
+            <!-- Filter Toolbar -->
+            <div class="flex flex-wrap items-center gap-2 mb-6 sm:mb-8" id="oss-filters">
+              <button
+                type="button"
+                data-filter="all"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-900 text-white shadow-xs"
+              >
+                All ({contributions.length})
+              </button>
+              <button
+                type="button"
+                data-filter="merged"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+              >
+                Merged ({contributions.filter(c => c.status === 'merged').length})
+              </button>
+              <button
+                type="button"
+                data-filter="in-review"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+              >
+                In Review ({contributions.filter(c => c.status === 'in-review').length})
+              </button>
+              <button
+                type="button"
+                data-filter="opensearch"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+              >
+                OpenSearch
+              </button>
+              <button
+                type="button"
+                data-filter="o19s"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+              >
+                Chorus / Quepid
+              </button>
+            </div>
+
+            <!-- List of Cards -->
+            <div class="space-y-6 sm:space-y-7" id="oss-cards-container">
+              {contributions.map((item) => {
+                const isMerged = item.status === "merged";
+                const isOpensearch = item.repo.includes("opensearch");
+                const isO19s = item.repo.includes("o19s");
+
+                return (
+                  <div
+                    class="oss-card bg-white rounded-xl sm:rounded-2xl border border-gray-200 shadow-xs hover:shadow-md hover:border-gray-300 transition-all duration-300 p-5 sm:p-6 md:p-7"
+                    data-status={item.status}
+                    data-repo={isOpensearch ? "opensearch" : isO19s ? "o19s" : "other"}
+                  >
+                    <!-- Header Strip: Repo Name + Status + PR Link -->
+                    <div class="flex flex-wrap items-center justify-between gap-3 pb-3.5 mb-3.5 border-b border-gray-100">
+                      <div class="flex flex-wrap items-center gap-2 min-w-0">
+                        <!-- Repository Link with GitHub Icon -->
+                        <a
+                          href={item.repoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-semibold text-gray-800 hover:text-indigo-600 transition-colors"
+                        >
+                          <svg class="w-4 h-4 fill-current text-gray-700 shrink-0" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                          </svg>
+                          <span class="truncate">{item.repo}</span>
+                        </a>
+
+                        <span class="text-gray-300 hidden sm:inline">•</span>
+
+                        <span class="text-xs text-gray-500 font-sans hidden sm:inline">
+                          {item.org}
+                        </span>
+                      </div>
+
+                      <div class="flex items-center gap-2 shrink-0">
+                        <!-- Status Symbol / Badge -->
+                        {isMerged ? (
+                          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+                            <!-- Git Merge SVG Icon -->
+                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="18" cy="18" r="3"></circle>
+                              <circle cx="6" cy="6" r="3"></circle>
+                              <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                            </svg>
+                            <span>Merged</span>
+                          </span>
+                        ) : (
+                          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-violet-50 text-violet-700 border border-violet-200">
+                            <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
+                            <!-- Git PR SVG Icon -->
+                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                              <circle cx="18" cy="18" r="3"></circle>
+                              <circle cx="6" cy="6" r="3"></circle>
+                              <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                              <line x1="6" y1="9" x2="6" y2="21"></line>
+                            </svg>
+                            <span>In Review</span>
+                          </span>
+                        )}
+
+                        <!-- PR Tag Link -->
+                        <a
+                          href={item.prUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                          title="View Pull Request"
+                        >
+                          PR #{item.prNumber} ↗
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Title & Category -->
+                    <div>
+                      <div class="flex items-center gap-2 mb-1.5">
+                        <span class="text-xs font-mono text-indigo-600 font-medium">
+                          {item.category}
+                        </span>
+                        <span class="text-gray-300">•</span>
+                        <span class="text-xs font-mono text-gray-400">
+                          {item.date}
+                        </span>
+                      </div>
+
+                      <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-snug">
+                        <a
+                          href={item.prUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="hover:text-indigo-600 transition-colors"
+                        >
+                          {item.title}
+                        </a>
+                      </h3>
+                    </div>
+
+                    <!-- Key Points: Crisp, concise bullet points directly on clean white background -->
+                    <ul class="my-4 space-y-2">
+                      {item.keyPoints.map((point) => (
+                        <li class="flex items-start gap-2.5">
+                          <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" />
+                          <span class="text-xs sm:text-sm text-gray-600 leading-relaxed font-sans">
+                            {point}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <!-- Tech Stack Badges & Direct Action Links -->
+                    <div class="pt-3.5 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                      <!-- Skills Tags with SVG Icons -->
+                      <div class="flex flex-wrap items-center gap-1.5">
+                        {item.skills.map((skill) => {
+                          const icon = getTechIcon(skill);
+                          return (
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono text-gray-600 bg-gray-50 border border-gray-200/80">
+                              {icon && <img src={icon} alt="" class="w-3.5 h-3.5 object-contain" />}
+                              <span>{skill}</span>
+                            </span>
+                          );
+                        })}
+                      </div>
+
+                      <!-- Buttons -->
+                      <div class="flex items-center gap-2 shrink-0">
+                        {item.issueUrl && (
+                          <a
+                            href={item.issueUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono font-medium text-gray-600 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 rounded border border-gray-200 transition-colors"
+                          >
+                            <span>Issue #{item.issueNumber}</span>
+                            <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        )}
+
+                        <a
+                          href={item.prUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-semibold text-white bg-gray-900 hover:bg-gray-800 rounded shadow-xs hover:shadow transition-all"
+                        >
+                          <span>View PR</span>
+                          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  // Filter button interactive logic
+  const filterBtns = document.querySelectorAll(".oss-filter-btn");
+  const cards = document.querySelectorAll<HTMLElement>(".oss-card");
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+
+      // Update active button state
+      filterBtns.forEach((b) => {
+        b.classList.remove("bg-gray-900", "text-white");
+        b.classList.add("bg-gray-100", "text-gray-700");
+      });
+      btn.classList.add("bg-gray-900", "text-white");
+      btn.classList.remove("bg-gray-100", "text-gray-700");
+
+      // Filter cards
+      cards.forEach((card) => {
+        const status = card.getAttribute("data-status");
+        const repo = card.getAttribute("data-repo");
+
+        let show = false;
+        if (filter === "all") {
+          show = true;
+        } else if (filter === "merged" && status === "merged") {
+          show = true;
+        } else if (filter === "in-review" && status === "in-review") {
+          show = true;
+        } else if (filter === "opensearch" && repo === "opensearch") {
+          show = true;
+        } else if (filter === "o19s" && repo === "o19s") {
+          show = true;
+        }
+
+        if (show) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
