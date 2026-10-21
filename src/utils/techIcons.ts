@@ -33,9 +33,10 @@ export function getTechIcon(name: string): string | null {
   if (normalized.includes("postman")) return "/icons/postman.svg";
   if (normalized.includes("cmake")) return "/icons/cmake.svg";
   if (normalized.includes("playwright")) return "/icons/playwright.svg";
-  if (normalized.includes("socketio")) return "/icons/socketio.svg";
+  if (normalized.includes("socketio") || normalized.includes("websocket")) return "/icons/socketio.svg";
   if (normalized.includes("sqlalchemy")) return "/icons/sqlalchemy.svg";
-  if (normalized.includes("posix") || normalized.includes("thread") || normalized.includes("concurrency") || normalized.includes("socket")) return "/icons/c.svg";
+  if (normalized.includes("bubbletea") || normalized.includes("bubble")) return "/icons/go.svg";
+  if (normalized.includes("posix") || normalized.includes("thread") || normalized.includes("concurrency") || normalized.includes("socket") || normalized.includes("aes") || normalized.includes("tls")) return "/icons/c.svg";
 
   return null;
 }

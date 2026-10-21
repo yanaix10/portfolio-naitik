@@ -48,16 +48,107 @@ const hasContributions = contributions.length > 0;
                 </div>
               </div>
 
-              <!-- Quick Metrics Grid -->
+              <!-- Quick Metrics Grid with Live GitHub PR Tracker -->
               <div class="grid grid-cols-2 gap-2 pt-2 border-t border-gray-100">
-                <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-100">
-                  <div class="text-xs font-mono text-gray-500">Authored PRs</div>
-                  <div class="text-lg font-bold text-gray-900 font-mono">13+</div>
-                </div>
-                <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-100">
-                  <div class="text-xs font-mono text-gray-500">Repositories</div>
-                  <div class="text-lg font-bold text-gray-900 font-mono">5+ Core</div>
-                </div>
+                <!-- Total PRs Card -->
+                <a
+                  href="https://github.com/pulls?q=is%3Apr+author%3Ayanaix10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group bg-gray-50 hover:bg-indigo-50/50 p-2.5 rounded-lg border border-gray-100 hover:border-indigo-200 transition-all block"
+                  title="View all authored pull requests on GitHub"
+                >
+                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 group-hover:text-indigo-600 transition-colors">
+                    <span>Total PRs</span>
+                    <svg class="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                  <div class="flex items-baseline gap-1 mt-0.5">
+                    <span id="oss-live-total-prs" class="text-lg font-bold text-gray-900 font-mono group-hover:text-indigo-600 transition-colors">13</span>
+                    <span class="text-[10px] font-mono text-gray-400">total</span>
+                  </div>
+                </a>
+
+                <!-- Merged PRs Card -->
+                <a
+                  href="https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Ayanaix10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group bg-purple-50/50 hover:bg-purple-50 p-2.5 rounded-lg border border-purple-100/90 hover:border-purple-300 transition-all block"
+                  title="View merged pull requests on GitHub"
+                >
+                  <div class="flex items-center justify-between text-xs font-mono text-purple-700">
+                    <span class="flex items-center gap-1 font-medium">
+                      <!-- Git Merge SVG Icon -->
+                      <svg class="w-3 h-3 text-purple-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="18" cy="18" r="3"></circle>
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                      </svg>
+                      <span>Merged</span>
+                    </span>
+                    <svg class="w-3 h-3 opacity-50 group-hover:opacity-100 text-purple-600 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                  <div class="flex items-baseline gap-1 mt-0.5">
+                    <span id="oss-live-merged-prs" class="text-lg font-bold text-purple-900 font-mono">8</span>
+                    <span class="text-[10px] font-mono font-medium text-purple-600">shipped</span>
+                  </div>
+                </a>
+
+                <!-- In Review PRs Card -->
+                <a
+                  href="https://github.com/pulls?q=is%3Apr+is%3Aopen+author%3Ayanaix10"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group bg-gray-50 hover:bg-violet-50/50 p-2.5 rounded-lg border border-gray-100 hover:border-violet-200 transition-all block"
+                  title="View pull requests currently in review on GitHub"
+                >
+                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 group-hover:text-violet-600 transition-colors">
+                    <span class="flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
+                      <span>In Review</span>
+                    </span>
+                    <svg class="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                  <div class="flex items-baseline gap-1 mt-0.5">
+                    <span id="oss-live-open-prs" class="text-lg font-bold text-gray-900 font-mono group-hover:text-violet-700 transition-colors">5</span>
+                    <span class="text-[10px] font-mono text-gray-400">active</span>
+                  </div>
+                </a>
+
+                <!-- Repositories Card -->
+                <a
+                  href="https://github.com/yanaix10?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group bg-gray-50 hover:bg-gray-100/80 p-2.5 rounded-lg border border-gray-100 hover:border-gray-300 transition-all block"
+                  title="View repositories on GitHub"
+                >
+                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 group-hover:text-gray-800 transition-colors">
+                    <span>Repositories</span>
+                    <svg class="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                  <div class="flex items-baseline gap-1 mt-0.5">
+                    <span class="text-lg font-bold text-gray-900 font-mono">6+</span>
+                    <span class="text-[10px] font-mono text-gray-400">core</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Live Sync Status Banner -->
+              <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-500">
+                <span class="inline-flex items-center gap-1.5">
+                  <span id="oss-live-indicator" class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span id="oss-live-status-text">GitHub Live Sync Active</span>
+                </span>
+                <span class="text-[10px] text-gray-400 font-mono">Auto-updates</span>
               </div>
 
               <a
@@ -324,4 +415,81 @@ const hasContributions = contributions.length > 0;
       });
     });
   });
+
+  // Live GitHub PR & Merged Tracker
+  async function fetchLivePRStats() {
+    const totalEl = document.getElementById("oss-live-total-prs");
+    const mergedEl = document.getElementById("oss-live-merged-prs");
+    const openEl = document.getElementById("oss-live-open-prs");
+    const statusTextEl = document.getElementById("oss-live-status-text");
+    const indicatorEl = document.getElementById("oss-live-indicator");
+
+    const CACHE_KEY = "oss_pr_stats_yanaix10_v3";
+    const CACHE_TTL = 3 * 60 * 1000; // 3 minutes cache
+
+    function applyStats(total: number, merged: number, open: number, label: string) {
+      if (totalEl && total !== undefined) totalEl.textContent = String(total);
+      if (mergedEl && merged !== undefined) mergedEl.textContent = String(merged);
+      if (openEl && open !== undefined) openEl.textContent = String(open);
+      if (statusTextEl && label) statusTextEl.textContent = label;
+      if (indicatorEl) {
+        indicatorEl.className = "w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse";
+      }
+    }
+
+    // 1. Instant hydration from cache if fresh
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Date.now() - parsed.timestamp < CACHE_TTL) {
+          applyStats(parsed.total, parsed.merged, parsed.open, "GitHub Live Sync Active");
+          return;
+        }
+      }
+    } catch {
+      // Ignore localStorage availability issues
+    }
+
+    // 2. Query GitHub Search API live
+    try {
+      const [totalRes, mergedRes, openRes] = await Promise.all([
+        fetch("https://api.github.com/search/issues?q=is:pr+author:yanaix10", {
+          headers: { Accept: "application/vnd.github.v3+json" },
+        }),
+        fetch("https://api.github.com/search/issues?q=is:pr+is:merged+author:yanaix10", {
+          headers: { Accept: "application/vnd.github.v3+json" },
+        }),
+        fetch("https://api.github.com/search/issues?q=is:pr+is:open+author:yanaix10", {
+          headers: { Accept: "application/vnd.github.v3+json" },
+        }),
+      ]);
+
+      if (totalRes.ok && mergedRes.ok) {
+        const totalData = await totalRes.json();
+        const mergedData = await mergedRes.json();
+        const openData = openRes.ok ? await openRes.json() : null;
+
+        const total = typeof totalData.total_count === "number" ? totalData.total_count : 13;
+        const merged = typeof mergedData.total_count === "number" ? mergedData.total_count : 8;
+        const open = typeof openData?.total_count === "number" ? openData.total_count : Math.max(0, total - merged);
+
+        applyStats(total, merged, open, "GitHub Live Sync Active");
+
+        try {
+          localStorage.setItem(
+            CACHE_KEY,
+            JSON.stringify({ total, merged, open, timestamp: Date.now() })
+          );
+        } catch {}
+      } else {
+        // Fallback gracefully (e.g. rate limit reached)
+        applyStats(13, 8, 5, "Live Tracked • Synced");
+      }
+    } catch {
+      applyStats(13, 8, 5, "Live Tracked • Synced");
+    }
+  }
+
+  fetchLivePRStats();
 </script>

@@ -127,6 +127,23 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         {project.description}
                       </p>
 
+                      {project.points && project.points.length > 0 && (
+                        <ul class="space-y-2 py-1">
+                          {project.points.map((point) => (
+                            <li class="flex items-start gap-2.5">
+                              <span
+                                class="inline-block w-1.5 h-1.5 rounded-full mt-2 shrink-0"
+                                style={{ backgroundColor: siteConfig.accentColor }}
+                              />
+                              <span
+                                class="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed font-sans"
+                                set:html={point}
+                              />
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
                       {project.skills && project.skills.length > 0 && (
                         <div class="flex flex-wrap gap-2 pt-1">
                           {project.skills.map((skill) => {
