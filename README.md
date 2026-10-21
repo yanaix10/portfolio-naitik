@@ -1,4 +1,4 @@
-# Naitik Yadav — Developer Portfolio
+# Naitik Yadav - Developer Portfolio
 
 ![Portfolio Preview](./screenshot.png)
 
