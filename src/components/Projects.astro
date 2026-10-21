@@ -10,7 +10,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white">
               Projects
             </h2>
             <div
@@ -24,7 +24,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
               {siteConfig.projects.map((project, index) => (
                 <div class="group relative">
                   <div
-                    class="block relative p-5 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
+                    class="block relative p-5 sm:p-6 md:p-8 bg-gray-50 dark:bg-gray-900/80 rounded-xl sm:rounded-2xl border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:bg-white dark:hover:bg-gray-900 hover:shadow-xl hover:border-gray-300 dark:hover:border-gray-700 hover:-translate-y-1"
                   >
                     <div class="space-y-4">
                       <div>
@@ -39,19 +39,19 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         <!-- Project Title & Action Buttons Row -->
                         <div class="flex items-start sm:items-center justify-between gap-3 sm:gap-4">
                           <div class="flex flex-wrap items-center gap-2 sm:gap-3 min-w-0">
-                            <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-snug">
+                            <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white leading-snug">
                               <a
                                 href={project.demo || project.github || project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="hover:text-indigo-600 transition-colors"
+                                class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                               >
                                 {project.name}
                               </a>
                             </h3>
 
                             {project.inProgress && (
-                              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-amber-50 text-amber-700 border border-amber-200 shrink-0">
+                              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/40 dark:text-amber-400 dark:border-amber-800 shrink-0">
                                 <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
                                 <span>In Progress</span>
                               </span>
@@ -67,7 +67,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                                 rel="noopener noreferrer"
                                 aria-label="GitHub Repository"
                                 title="View on GitHub"
-                                class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 hover:bg-gray-700 hover:scale-110 shadow-xs"
+                                class="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center bg-gray-900 dark:bg-gray-800 rounded-full text-white dark:text-gray-200 border border-transparent dark:border-gray-700 transition-all duration-300 hover:bg-gray-700 dark:hover:bg-gray-700 hover:scale-110 shadow-xs"
                               >
                                 <svg
                                   class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"
@@ -123,7 +123,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                         </div>
                       </div>
 
-                      <p class="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                      <p class="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                         {project.description}
                       </p>
 
@@ -136,7 +136,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                                 style={{ backgroundColor: siteConfig.accentColor }}
                               />
                               <span
-                                class="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed font-sans"
+                                class="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-sans"
                                 set:html={point}
                               />
                             </li>
@@ -150,7 +150,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                             const icon = getTechIcon(skill);
                             return (
                               <span
-                                class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-100 text-gray-800 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-200 transition-colors duration-200"
+                                class="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                               >
                                 {icon && (
                                   <img

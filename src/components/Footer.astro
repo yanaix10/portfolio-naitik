@@ -7,23 +7,23 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 
-<footer class="relative bg-gray-50 border-t border-gray-200">
+<footer class="relative bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 transition-colors duration-200">
   <div class="mx-auto max-w-6xl px-6 py-12 lg:px-8">
     <div
       class="flex flex-col md:flex-row md:items-center md:justify-between gap-8"
     >
       <div class="flex flex-col gap-4">
-        <h3 class="text-2xl font-bold text-gray-800">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-white">
           {siteConfig.name}
         </h3>
-        <p class="text-base text-gray-600">
+        <p class="text-base text-gray-600 dark:text-gray-400">
           {siteConfig.title}
         </p>
         <div class="flex gap-x-6">
           <a
             href={`mailto:${siteConfig.social.email}`}
             aria-label="Email"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
+            class="text-gray-600 dark:text-gray-400 transition-colors duration-300 hover:text-[var(--accent-color)] dark:hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
             <svg
@@ -50,7 +50,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
+            class="text-gray-600 dark:text-gray-400 transition-colors duration-300 hover:text-[var(--accent-color)] dark:hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
             <svg
@@ -76,7 +76,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
+            class="text-gray-600 dark:text-gray-400 transition-colors duration-300 hover:text-[var(--accent-color)] dark:hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
             <svg
@@ -100,7 +100,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
+            class="text-gray-600 dark:text-gray-400 transition-colors duration-300 hover:text-[var(--accent-color)] dark:hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
             <svg
@@ -122,18 +122,18 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         </div>
       </div>
 
-      <div class="flex flex-col md:items-end gap-4 pt-4 md:pt-0 border-t border-gray-200/60 md:border-t-0">
+      <div class="flex flex-col md:items-end gap-4 pt-4 md:pt-0 border-t border-gray-200/60 dark:border-gray-800/60 md:border-t-0">
         <nav class="flex flex-wrap gap-x-6 gap-y-2">
           <a
             href="#about"
-            class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+            class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >About</a
           >
           {
             hasProjects && (
               <a
                 href="#projects"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 Projects
               </a>
@@ -143,7 +143,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             hasOpenSource && (
               <a
                 href="#opensource"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 Open Source
               </a>
@@ -153,7 +153,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             hasExperience && (
               <a
                 href="#experience"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 Experience
               </a>
@@ -163,14 +163,14 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             hasEducation && (
               <a
                 href="#education"
-                class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+                class="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 Education
               </a>
             )
           }
         </nav>
-        <p class="text-xs sm:text-sm text-gray-500">
+        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
           © {new Date().getFullYear()}
           {siteConfig.name}. All rights reserved.
         </p>
@@ -182,7 +182,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   <div class="absolute inset-0 -z-10 overflow-hidden">
     <svg
       aria-hidden="true"
-      class="absolute bottom-0 left-0 w-full h-24 text-gray-100"
+      class="absolute bottom-0 left-0 w-full h-24 text-gray-100 dark:text-gray-900/40"
     >
       <pattern
         id="footer-pattern"

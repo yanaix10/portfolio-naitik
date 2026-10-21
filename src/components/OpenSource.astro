@@ -8,12 +8,12 @@ const hasContributions = contributions.length > 0;
 
 {
   hasContributions && (
-    <section id="opensource" class="px-6 py-14 sm:px-12 sm:py-16 md:p-16 lg:p-24 border-t border-gray-100">
+    <section id="opensource" class="px-6 py-14 sm:px-12 sm:py-16 md:p-16 lg:p-24 border-t border-gray-100 dark:border-gray-800/80">
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-start">
           <!-- Left Sticky Sidebar / Heading -->
           <div class="lg:col-span-4 lg:sticky lg:top-24">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 tracking-tight">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white tracking-tight">
               Open Source
             </h2>
             <div
@@ -21,27 +21,27 @@ const hasContributions = contributions.length > 0;
               style={`background-color: ${siteConfig.accentColor}`}
             />
             
-            <p class="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed font-sans">
+            <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-sans">
               Upstream contributions to search engines, distributed SDKs, and developer tooling across 
-              <span class="font-semibold text-gray-800"> Linux Foundation / AWS OpenSearch</span> and 
-              <span class="font-semibold text-gray-800"> OpenSource Connections</span>.
+              <span class="font-semibold text-gray-800 dark:text-gray-100"> Linux Foundation / AWS OpenSearch</span> and 
+              <span class="font-semibold text-gray-800 dark:text-gray-100"> OpenSource Connections</span>.
             </p>
 
             <!-- GitHub Profile Summary Card -->
-            <div class="mt-6 p-5 rounded-2xl bg-white border border-gray-200 shadow-xs space-y-4">
+            <div class="mt-6 p-5 rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-xs space-y-4">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center shrink-0">
+                <div class="w-10 h-10 rounded-full bg-gray-900 dark:bg-gray-800 text-white flex items-center justify-center shrink-0 border border-transparent dark:border-gray-700">
                   <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
                 </div>
                 <div class="min-w-0">
-                  <p class="text-xs uppercase tracking-wider text-gray-500 font-mono">GitHub Profile</p>
+                  <p class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 font-mono">GitHub Profile</p>
                   <a
                     href="https://github.com/yanaix10"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-sm font-bold text-gray-900 hover:text-indigo-600 transition-colors font-mono"
+                    class="text-sm font-bold text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-mono"
                   >
                     @yanaix10 ↗
                   </a>
@@ -49,23 +49,23 @@ const hasContributions = contributions.length > 0;
               </div>
 
               <!-- Quick Metrics Grid with Live GitHub PR Tracker -->
-              <div class="grid grid-cols-2 gap-2 pt-2 border-t border-gray-100">
+              <div class="grid grid-cols-2 gap-2 pt-2 border-t border-gray-100 dark:border-gray-800">
                 <!-- Total PRs Card -->
                 <a
                   href="https://github.com/pulls?q=is%3Apr+author%3Ayanaix10"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="group bg-gray-50 hover:bg-indigo-50/50 p-2.5 rounded-lg border border-gray-100 hover:border-indigo-200 transition-all block"
+                  class="group bg-gray-50 dark:bg-gray-800/60 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/40 p-2.5 rounded-lg border border-gray-100 dark:border-gray-700/60 hover:border-indigo-200 dark:hover:border-indigo-500/50 transition-all block"
                   title="View all authored pull requests on GitHub"
                 >
-                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 group-hover:text-indigo-600 transition-colors">
+                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     <span>Total PRs</span>
                     <svg class="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span id="oss-live-total-prs" class="text-lg font-bold text-gray-900 font-mono group-hover:text-indigo-600 transition-colors">13</span>
+                    <span id="oss-live-total-prs" class="text-lg font-bold text-gray-900 dark:text-white font-mono group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">13</span>
                     <span class="text-[10px] font-mono text-gray-400">total</span>
                   </div>
                 </a>
@@ -75,26 +75,26 @@ const hasContributions = contributions.length > 0;
                   href="https://github.com/pulls?q=is%3Apr+is%3Amerged+author%3Ayanaix10"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="group bg-purple-50/50 hover:bg-purple-50 p-2.5 rounded-lg border border-purple-100/90 hover:border-purple-300 transition-all block"
+                  class="group bg-purple-50/50 dark:bg-purple-950/30 hover:bg-purple-50 dark:hover:bg-purple-900/40 p-2.5 rounded-lg border border-purple-100/90 dark:border-purple-800/60 hover:border-purple-300 dark:hover:border-purple-600 transition-all block"
                   title="View merged pull requests on GitHub"
                 >
-                  <div class="flex items-center justify-between text-xs font-mono text-purple-700">
+                  <div class="flex items-center justify-between text-xs font-mono text-purple-700 dark:text-purple-300">
                     <span class="flex items-center gap-1 font-medium">
                       <!-- Git Merge SVG Icon -->
-                      <svg class="w-3 h-3 text-purple-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <svg class="w-3 h-3 text-purple-600 dark:text-purple-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="18" cy="18" r="3"></circle>
                         <circle cx="6" cy="6" r="3"></circle>
                         <path d="M6 21V9a9 9 0 0 0 9 9"></path>
                       </svg>
                       <span>Merged</span>
                     </span>
-                    <svg class="w-3 h-3 opacity-50 group-hover:opacity-100 text-purple-600 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-3 h-3 opacity-50 group-hover:opacity-100 text-purple-600 dark:text-purple-400 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span id="oss-live-merged-prs" class="text-lg font-bold text-purple-900 font-mono">8</span>
-                    <span class="text-[10px] font-mono font-medium text-purple-600">shipped</span>
+                    <span id="oss-live-merged-prs" class="text-lg font-bold text-purple-900 dark:text-purple-200 font-mono">8</span>
+                    <span class="text-[10px] font-mono font-medium text-purple-600 dark:text-purple-400">shipped</span>
                   </div>
                 </a>
 
@@ -103,10 +103,10 @@ const hasContributions = contributions.length > 0;
                   href="https://github.com/pulls?q=is%3Apr+is%3Aopen+author%3Ayanaix10"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="group bg-gray-50 hover:bg-violet-50/50 p-2.5 rounded-lg border border-gray-100 hover:border-violet-200 transition-all block"
+                  class="group bg-gray-50 dark:bg-gray-800/60 hover:bg-violet-50/50 dark:hover:bg-violet-950/40 p-2.5 rounded-lg border border-gray-100 dark:border-gray-700/60 hover:border-violet-200 dark:hover:border-violet-500/50 transition-all block"
                   title="View pull requests currently in review on GitHub"
                 >
-                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 group-hover:text-violet-600 transition-colors">
+                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 dark:text-gray-400 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                     <span class="flex items-center gap-1">
                       <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
                       <span>In Review</span>
@@ -116,7 +116,7 @@ const hasContributions = contributions.length > 0;
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span id="oss-live-open-prs" class="text-lg font-bold text-gray-900 font-mono group-hover:text-violet-700 transition-colors">5</span>
+                    <span id="oss-live-open-prs" class="text-lg font-bold text-gray-900 dark:text-white font-mono group-hover:text-violet-700 dark:group-hover:text-violet-300 transition-colors">5</span>
                     <span class="text-[10px] font-mono text-gray-400">active</span>
                   </div>
                 </a>
@@ -126,24 +126,24 @@ const hasContributions = contributions.length > 0;
                   href="https://github.com/yanaix10?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="group bg-gray-50 hover:bg-gray-100/80 p-2.5 rounded-lg border border-gray-100 hover:border-gray-300 transition-all block"
+                  class="group bg-gray-50 dark:bg-gray-800/60 hover:bg-gray-100/80 dark:hover:bg-gray-700/60 p-2.5 rounded-lg border border-gray-100 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 transition-all block"
                   title="View repositories on GitHub"
                 >
-                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 group-hover:text-gray-800 transition-colors">
+                  <div class="flex items-center justify-between text-xs font-mono text-gray-500 dark:text-gray-400 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors">
                     <span>Repositories</span>
                     <svg class="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span class="text-lg font-bold text-gray-900 font-mono">6+</span>
+                    <span class="text-lg font-bold text-gray-900 dark:text-white font-mono">6+</span>
                     <span class="text-[10px] font-mono text-gray-400">core</span>
                   </div>
                 </a>
               </div>
 
               <!-- Live Sync Status Banner -->
-              <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-gray-50 border border-gray-100 text-[11px] font-mono text-gray-500">
+              <div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-gray-50 dark:bg-gray-800/60 border border-gray-100 dark:border-gray-700/60 text-[11px] font-mono text-gray-500 dark:text-gray-400">
                 <span class="inline-flex items-center gap-1.5">
                   <span id="oss-live-indicator" class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                   <span id="oss-live-status-text">GitHub Live Sync Active</span>
@@ -155,7 +155,7 @@ const hasContributions = contributions.length > 0;
                 href="https://github.com/yanaix10?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="w-full flex items-center justify-center gap-2 py-2 px-3 text-xs font-medium font-mono text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                class="w-full flex items-center justify-center gap-2 py-2 px-3 text-xs font-medium font-mono text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors"
               >
                 <span>Browse All Activity</span>
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,35 +172,35 @@ const hasContributions = contributions.length > 0;
               <button
                 type="button"
                 data-filter="all"
-                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-900 text-white shadow-xs"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-900 dark:bg-indigo-600 text-white shadow-xs"
               >
                 All ({contributions.length})
               </button>
               <button
                 type="button"
                 data-filter="merged"
-                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               >
                 Merged ({contributions.filter(c => c.status === 'merged').length})
               </button>
               <button
                 type="button"
                 data-filter="in-review"
-                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               >
                 In Review ({contributions.filter(c => c.status === 'in-review').length})
               </button>
               <button
                 type="button"
                 data-filter="opensearch"
-                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               >
                 OpenSearch
               </button>
               <button
                 type="button"
                 data-filter="o19s"
-                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 text-gray-700 hover:bg-gray-200"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
               >
                 Chorus / Quepid
               </button>
@@ -215,29 +215,29 @@ const hasContributions = contributions.length > 0;
 
                 return (
                   <div
-                    class="oss-card bg-white rounded-xl sm:rounded-2xl border border-gray-200 shadow-xs hover:shadow-md hover:border-gray-300 transition-all duration-300 p-5 sm:p-6 md:p-7"
+                    class="oss-card bg-white dark:bg-gray-900/80 rounded-xl sm:rounded-2xl border border-gray-200 dark:border-gray-800 shadow-xs hover:shadow-md hover:border-gray-300 dark:hover:border-gray-700 hover:bg-white dark:hover:bg-gray-900 transition-all duration-300 p-5 sm:p-6 md:p-7"
                     data-status={item.status}
                     data-repo={isOpensearch ? "opensearch" : isO19s ? "o19s" : "other"}
                   >
                     <!-- Header Strip: Repo Name + Status + PR Link -->
-                    <div class="flex flex-wrap items-center justify-between gap-3 pb-3.5 mb-3.5 border-b border-gray-100">
+                    <div class="flex flex-wrap items-center justify-between gap-3 pb-3.5 mb-3.5 border-b border-gray-100 dark:border-gray-800">
                       <div class="flex flex-wrap items-center gap-2 min-w-0">
                         <!-- Repository Link with GitHub Icon -->
                         <a
                           href={item.repoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-semibold text-gray-800 hover:text-indigo-600 transition-colors"
+                          class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-semibold text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                         >
-                          <svg class="w-4 h-4 fill-current text-gray-700 shrink-0" viewBox="0 0 24 24">
+                          <svg class="w-4 h-4 fill-current text-gray-700 dark:text-gray-300 shrink-0" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                           </svg>
                           <span class="truncate">{item.repo}</span>
                         </a>
 
-                        <span class="text-gray-300 hidden sm:inline">•</span>
+                        <span class="text-gray-300 dark:text-gray-700 hidden sm:inline">•</span>
 
-                        <span class="text-xs text-gray-500 font-sans hidden sm:inline">
+                        <span class="text-xs text-gray-500 dark:text-gray-400 font-sans hidden sm:inline">
                           {item.org}
                         </span>
                       </div>
@@ -245,7 +245,7 @@ const hasContributions = contributions.length > 0;
                       <div class="flex items-center gap-2 shrink-0">
                         <!-- Status Symbol / Badge -->
                         {isMerged ? (
-                          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+                          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-800">
                             <!-- Git Merge SVG Icon -->
                             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                               <circle cx="18" cy="18" r="3"></circle>
@@ -255,7 +255,7 @@ const hasContributions = contributions.length > 0;
                             <span>Merged</span>
                           </span>
                         ) : (
-                          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-violet-50 text-violet-700 border border-violet-200">
+                          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-violet-50 text-violet-700 border border-violet-200 dark:bg-violet-950/40 dark:text-violet-400 dark:border-violet-800">
                             <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
                             <!-- Git PR SVG Icon -->
                             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -273,7 +273,7 @@ const hasContributions = contributions.length > 0;
                           href={item.prUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                          class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                           title="View Pull Request"
                         >
                           PR #{item.prNumber} ↗
@@ -284,21 +284,21 @@ const hasContributions = contributions.length > 0;
                     <!-- Title & Category -->
                     <div>
                       <div class="flex items-center gap-2 mb-1.5">
-                        <span class="text-xs font-mono text-indigo-600 font-medium">
+                        <span class="text-xs font-mono text-indigo-600 dark:text-indigo-400 font-medium">
                           {item.category}
                         </span>
-                        <span class="text-gray-300">•</span>
-                        <span class="text-xs font-mono text-gray-400">
+                        <span class="text-gray-300 dark:text-gray-700">•</span>
+                        <span class="text-xs font-mono text-gray-400 dark:text-gray-500">
                           {item.date}
                         </span>
                       </div>
 
-                      <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-snug">
+                      <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white leading-snug">
                         <a
                           href={item.prUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="hover:text-indigo-600 transition-colors"
+                          class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                         >
                           {item.title}
                         </a>
@@ -309,8 +309,8 @@ const hasContributions = contributions.length > 0;
                     <ul class="my-4 space-y-2">
                       {item.keyPoints.map((point) => (
                         <li class="flex items-start gap-2.5">
-                          <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" />
-                          <span class="text-xs sm:text-sm text-gray-600 leading-relaxed font-sans">
+                          <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 mt-2 shrink-0" />
+                          <span class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-sans">
                             {point}
                           </span>
                         </li>
@@ -318,13 +318,13 @@ const hasContributions = contributions.length > 0;
                     </ul>
 
                     <!-- Tech Stack Badges & Direct Action Links -->
-                    <div class="pt-3.5 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                    <div class="pt-3.5 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                       <!-- Skills Tags with SVG Icons -->
                       <div class="flex flex-wrap items-center gap-1.5">
                         {item.skills.map((skill) => {
                           const icon = getTechIcon(skill);
                           return (
-                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono text-gray-600 bg-gray-50 border border-gray-200/80">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-xs font-mono text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-800 border border-gray-200/80 dark:border-gray-700">
                               {icon && <img src={icon} alt="" class="w-3.5 h-3.5 object-contain" />}
                               <span>{skill}</span>
                             </span>
@@ -339,7 +339,7 @@ const hasContributions = contributions.length > 0;
                             href={item.issueUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono font-medium text-gray-600 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 rounded border border-gray-200 transition-colors"
+                            class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-mono font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded border border-gray-200 dark:border-gray-700 transition-colors"
                           >
                             <span>Issue #{item.issueNumber}</span>
                             <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -352,7 +352,7 @@ const hasContributions = contributions.length > 0;
                           href={item.prUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-semibold text-white bg-gray-900 hover:bg-gray-800 rounded shadow-xs hover:shadow transition-all"
+                          class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-semibold text-white bg-gray-900 dark:bg-indigo-600 hover:bg-gray-800 dark:hover:bg-indigo-500 rounded shadow-xs hover:shadow transition-all"
                         >
                           <span>View PR</span>
                           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
