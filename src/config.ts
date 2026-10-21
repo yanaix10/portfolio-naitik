@@ -56,20 +56,6 @@ export const siteConfig = {
       skills: ["Go", "Bubble Tea", "AES-256-GCM", "TLS 1.3", "Linux", "Docker"],
     },
     {
-      name: "VulnPulse: Distributed DAST Engine",
-      description:
-        "Dynamic Application Security Testing platform combining headless browser crawlers with concurrent heuristic vulnerability fuzzers.",
-      points: [
-        "<strong>Asynchronous Crawling Pipeline:</strong> Built an automated crawler leveraging Playwright and FastAPI to map attack surfaces across client-rendered single-page applications (SPAs), tracking dynamic DOM mutations and form inputs.",
-        "<strong>Concurrent Heuristic Fuzzers:</strong> Architected modular fuzzing workers executing 10+ vulnerability detectors (SQLi, reflected/stored XSS, SSRF, header injection) with automated Proof-of-Concept (PoC) payload generation.",
-        "<strong>CVSS v3.1 Scoring & Telemetry:</strong> Computed standardized vulnerability severity vectors via CVSS v3.1, streaming real-time scan progress and security findings to an interactive React dashboard over WebSockets.",
-      ],
-      link: "https://vulnpulse.vercel.app/",
-      github: "https://github.com/yanaix10/vulnscan",
-      demo: "https://vulnpulse.vercel.app/",
-      skills: ["FastAPI", "Python", "Playwright", "React", "SQLAlchemy"],
-    },
-    {
       name: "Mini-Redis: Concurrent Key-Value Store",
       description:
         "Thread-safe in-memory database built from scratch in C++ featuring raw POSIX socket networking, concurrent processing, and crash recovery.",
