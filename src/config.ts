@@ -12,14 +12,12 @@ export const siteConfig = {
   aboutMe:
     "I am Naitik Yadav, a 3rd-year B.Tech Computer Science & Engineering student at SRM University AP. I love building high-performance web applications, engineering scalable backend architectures, and deep-dive code debugging. Passionate about systems programming and open-source software, I actively contribute to projects like OpenSearch (Linux Foundation / AWS) and develop on Arch Linux as my daily driver.",
   skills: [
-    "Python",
     "Go",
     "C++",
     "JavaScript",
     "TypeScript",
     "Bash",
     "C",
-    "FastAPI",
     "Node.js",
     "Express.js",
     "MongoDB",
