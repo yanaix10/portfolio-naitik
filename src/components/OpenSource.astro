@@ -23,7 +23,8 @@ const hasContributions = contributions.length > 0;
             
             <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed font-sans">
               Upstream contributions to search engines, distributed SDKs, and developer tooling across 
-              <span class="font-semibold text-gray-800 dark:text-gray-100"> Linux Foundation / AWS OpenSearch</span> and 
+              <span class="font-semibold text-gray-800 dark:text-gray-100"> Linux Foundation / AWS OpenSearch</span>, 
+              <span class="font-semibold text-gray-800 dark:text-gray-100"> OneBusAway</span>, and 
               <span class="font-semibold text-gray-800 dark:text-gray-100"> OpenSource Connections</span>.
             </p>
 
@@ -65,8 +66,8 @@ const hasContributions = contributions.length > 0;
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span id="oss-live-total-prs" class="text-lg font-bold text-gray-900 dark:text-white font-mono group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">13</span>
-                    <span class="text-[10px] font-mono text-gray-400">total</span>
+                    <span id="oss-live-total-prs" class="text-lg font-bold text-gray-900 dark:text-white font-mono group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">18</span>
+                    <span class="text-[10px] font-mono text-gray-400">authored</span>
                   </div>
                 </a>
 
@@ -86,38 +87,38 @@ const hasContributions = contributions.length > 0;
                         <circle cx="6" cy="6" r="3"></circle>
                         <path d="M6 21V9a9 9 0 0 0 9 9"></path>
                       </svg>
-                      <span>Merged</span>
+                      <span>Merged PRs</span>
                     </span>
                     <svg class="w-3 h-3 opacity-50 group-hover:opacity-100 text-purple-600 dark:text-purple-400 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span id="oss-live-merged-prs" class="text-lg font-bold text-purple-900 dark:text-purple-200 font-mono">8</span>
+                    <span id="oss-live-merged-prs" class="text-lg font-bold text-purple-900 dark:text-purple-200 font-mono">10</span>
                     <span class="text-[10px] font-mono font-medium text-purple-600 dark:text-purple-400">shipped</span>
                   </div>
                 </a>
 
-                <!-- In Review PRs Card -->
+                <!-- Active PRs Card -->
                 <a
                   href="https://github.com/pulls?q=is%3Apr+is%3Aopen+author%3Ayanaix10"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="group bg-gray-50 dark:bg-gray-800/60 hover:bg-violet-50/50 dark:hover:bg-violet-950/40 p-2.5 rounded-lg border border-gray-100 dark:border-gray-700/60 hover:border-violet-200 dark:hover:border-violet-500/50 transition-all block"
-                  title="View pull requests currently in review on GitHub"
+                  title="View active pull requests currently open on GitHub"
                 >
                   <div class="flex items-center justify-between text-xs font-mono text-gray-500 dark:text-gray-400 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
-                    <span class="flex items-center gap-1">
-                      <span class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse"></span>
-                      <span>In Review</span>
+                    <span class="flex items-center gap-1 font-medium">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
+                      <span>Active PRs</span>
                     </span>
                     <svg class="w-3 h-3 opacity-40 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span id="oss-live-open-prs" class="text-lg font-bold text-gray-900 dark:text-white font-mono group-hover:text-violet-700 dark:group-hover:text-violet-300 transition-colors">5</span>
-                    <span class="text-[10px] font-mono text-gray-400">active</span>
+                    <span id="oss-live-open-prs" class="text-lg font-bold text-gray-900 dark:text-white font-mono group-hover:text-violet-700 dark:group-hover:text-violet-300 transition-colors">6</span>
+                    <span class="text-[10px] font-mono text-gray-400">in review</span>
                   </div>
                 </a>
 
@@ -136,8 +137,8 @@ const hasContributions = contributions.length > 0;
                     </svg>
                   </div>
                   <div class="flex items-baseline gap-1 mt-0.5">
-                    <span class="text-lg font-bold text-gray-900 dark:text-white font-mono">6+</span>
-                    <span class="text-[10px] font-mono text-gray-400">core</span>
+                    <span class="text-lg font-bold text-gray-900 dark:text-white font-mono">10+</span>
+                    <span class="text-[10px] font-mono text-gray-400">repos</span>
                   </div>
                 </a>
               </div>
@@ -204,20 +205,29 @@ const hasContributions = contributions.length > 0;
               >
                 Chorus / Quepid
               </button>
+              <button
+                type="button"
+                data-filter="onebusaway"
+                class="oss-filter-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium transition-all duration-200 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+              >
+                OneBusAway
+              </button>
             </div>
 
             <!-- List of Cards -->
             <div class="space-y-6 sm:space-y-7" id="oss-cards-container">
               {contributions.map((item) => {
                 const isMerged = item.status === "merged";
-                const isOpensearch = item.repo.includes("opensearch");
-                const isO19s = item.repo.includes("o19s");
+                const isOpensearch = item.repo.toLowerCase().includes("opensearch");
+                const isO19s = item.repo.toLowerCase().includes("o19s") || item.repo.toLowerCase().includes("quepid");
+                const isOneBusAway = item.repo.toLowerCase().includes("onebusaway");
+                const isMeshery = item.repo.toLowerCase().includes("meshery");
 
                 return (
                   <div
                     class="oss-card bg-white dark:bg-gray-900/80 rounded-xl sm:rounded-2xl border border-gray-200 dark:border-gray-800 shadow-xs hover:shadow-md hover:border-gray-300 dark:hover:border-gray-700 hover:bg-white dark:hover:bg-gray-900 transition-all duration-300 p-5 sm:p-6 md:p-7"
                     data-status={item.status}
-                    data-repo={isOpensearch ? "opensearch" : isO19s ? "o19s" : "other"}
+                    data-repo={isOpensearch ? "opensearch" : isO19s ? "o19s" : isOneBusAway ? "onebusaway" : isMeshery ? "meshery" : "other"}
                   >
                     <!-- Header Strip: Repo Name + Status + PR Link -->
                     <div class="flex flex-wrap items-center justify-between gap-3 pb-3.5 mb-3.5 border-b border-gray-100 dark:border-gray-800">
@@ -383,11 +393,11 @@ const hasContributions = contributions.length > 0;
 
       // Update active button state
       filterBtns.forEach((b) => {
-        b.classList.remove("bg-gray-900", "text-white");
-        b.classList.add("bg-gray-100", "text-gray-700");
+        b.classList.remove("bg-gray-900", "dark:bg-indigo-600", "text-white", "shadow-xs");
+        b.classList.add("bg-gray-100", "dark:bg-gray-800", "text-gray-700", "dark:text-gray-300");
       });
-      btn.classList.add("bg-gray-900", "text-white");
-      btn.classList.remove("bg-gray-100", "text-gray-700");
+      btn.classList.add("bg-gray-900", "dark:bg-indigo-600", "text-white", "shadow-xs");
+      btn.classList.remove("bg-gray-100", "dark:bg-gray-800", "text-gray-700", "dark:text-gray-300");
 
       // Filter cards
       cards.forEach((card) => {
@@ -399,11 +409,15 @@ const hasContributions = contributions.length > 0;
           show = true;
         } else if (filter === "merged" && status === "merged") {
           show = true;
-        } else if (filter === "in-review" && status === "in-review") {
+        } else if ((filter === "in-review" || filter === "active") && (status === "in-review" || status === "active")) {
           show = true;
         } else if (filter === "opensearch" && repo === "opensearch") {
           show = true;
         } else if (filter === "o19s" && repo === "o19s") {
+          show = true;
+        } else if (filter === "onebusaway" && repo === "onebusaway") {
+          show = true;
+        } else if (filter === "meshery" && repo === "meshery") {
           show = true;
         }
 
@@ -424,7 +438,11 @@ const hasContributions = contributions.length > 0;
     const statusTextEl = document.getElementById("oss-live-status-text");
     const indicatorEl = document.getElementById("oss-live-indicator");
 
-    const CACHE_KEY = "oss_pr_stats_yanaix10_v3";
+    const FALLBACK_TOTAL = 18;
+    const FALLBACK_MERGED = 10;
+    const FALLBACK_OPEN = 6;
+
+    const CACHE_KEY = "oss_pr_stats_yanaix10_v5";
     const CACHE_TTL = 3 * 60 * 1000; // 3 minutes cache
 
     function applyStats(total: number, merged: number, open: number, label: string) {
@@ -470,8 +488,8 @@ const hasContributions = contributions.length > 0;
         const mergedData = await mergedRes.json();
         const openData = openRes.ok ? await openRes.json() : null;
 
-        const total = typeof totalData.total_count === "number" ? totalData.total_count : 13;
-        const merged = typeof mergedData.total_count === "number" ? mergedData.total_count : 8;
+        const total = typeof totalData?.total_count === "number" ? totalData.total_count : FALLBACK_TOTAL;
+        const merged = typeof mergedData?.total_count === "number" ? mergedData.total_count : FALLBACK_MERGED;
         const open = typeof openData?.total_count === "number" ? openData.total_count : Math.max(0, total - merged);
 
         applyStats(total, merged, open, "GitHub Live Sync Active");
@@ -484,10 +502,10 @@ const hasContributions = contributions.length > 0;
         } catch {}
       } else {
         // Fallback gracefully (e.g. rate limit reached)
-        applyStats(13, 8, 5, "Live Tracked • Synced");
+        applyStats(FALLBACK_TOTAL, FALLBACK_MERGED, FALLBACK_OPEN, "Live Tracked • Synced");
       }
     } catch {
-      applyStats(13, 8, 5, "Live Tracked • Synced");
+      applyStats(FALLBACK_TOTAL, FALLBACK_MERGED, FALLBACK_OPEN, "Live Tracked • Synced");
     }
   }
 
