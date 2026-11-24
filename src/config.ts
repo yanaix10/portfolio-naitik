@@ -40,6 +40,35 @@ export const siteConfig = {
   ],
   projects: [
     {
+      name: "SkillSphere: Real-Time Coding Arena",
+      description:
+        "Full-stack 1v1 competitive coding platform featuring real-time editor synchronization, matchmaking lobbies, and sandboxed code execution.",
+      points: [
+        "<strong>Monaco Editor Integration:</strong> Integrated Monaco Editor with syntax highlighting, language auto-detection, and custom keybinding support across multiple programming languages.",
+        "<strong>Real-Time Duel Synchronization:</strong> Architected bidirectional WebSocket state synchronization via Socket.io with heartbeat health checks, reconnect grace periods, and instant test suite verdict streaming.",
+        "<strong>Sandboxed Multi-Language Execution:</strong> Engineered an asynchronous execution pipeline dispatching submissions to isolated containerized runner sandboxes (Piston API) with strict memory/CPU execution limits and real-time stderr/stdout capture.",
+        "<strong>Matchmaking & Progression Engine:</strong> Built real-time matchmaking lobbies with Elo rating calculations, automated room lifecycle cleanup, and MongoDB schemas tracking live competitive duel statistics.",
+      ],
+      link: "https://xskillsphere.vercel.app/",
+      github: "https://github.com/yanaix10/Skill-Sphere-",
+      demo: "https://xskillsphere.vercel.app/",
+      skills: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
+    },
+    {
+      name: "Doodle.io: Collaborative Canvas Game",
+      description:
+        "Multiplayer collaborative drawing and guessing game featuring real-time vector coordinate streaming, typo-tolerant scoring, and room lifecycle management.",
+      points: [
+        "<strong>Low-Latency Canvas Broadcasting:</strong> Engineered real-time vector coordinate serialization over WebSockets (Socket.io) to broadcast brush strokes, stroke widths, colors, and canvas resets with sub-50ms latency across concurrent players.",
+        "<strong>Fuzzy String-Matching Engine:</strong> Built a Levenshtein distance string-matching algorithm with an 80% similarity threshold for instant close-guess hints, typo tolerance, and synchronized clue reveals.",
+        "<strong>Room Session & State Machine:</strong> Designed an in-memory game state machine managing concurrent room lobbies, synchronized 60-second round timers, turn-based drawer rotation, and live score leaderboards.",
+      ],
+      link: "https://doodle-io-lake.vercel.app/",
+      github: "https://github.com/yanaix10/Doodle.io",
+      demo: "https://doodle-io-lake.vercel.app/",
+      skills: ["React", "Node.js", "Socket.io", "Express", "HTML5 Canvas"],
+    },
+    {
       name: "hey: End-to-End Encrypted Terminal Chat & Daemon",
       description:
         "Decoupled, zero-knowledge terminal chat and ephemeral voice engine in Go with native background daemons and cloud TLS relays.",
@@ -59,7 +88,7 @@ export const siteConfig = {
         "Thread-safe in-memory database built from scratch in C++ featuring raw POSIX socket networking, concurrent processing, and crash recovery.",
       points: [
         "<strong>Multi-Threaded Server Core:</strong> Built a non-blocking TCP server using raw POSIX sockets and a pre-allocated worker thread pool to eliminate thread-creation overhead under high concurrency.",
-        "<strong>$O(1)$ LRU Cache & Protocol Parser:</strong> Implemented a Least Recently Used (LRU) memory eviction engine using a concurrent hash map paired with a doubly linked list, backed by a custom RESP command parser.",
+        "<strong>$O(1)$ LRU Cache & RESP Parser:</strong> Implemented a Least Recently Used (LRU) memory eviction engine using a concurrent hash map paired with a doubly linked list, backed by a custom RESP command parser.",
         "<strong>AOF Durability Engine:</strong> Implemented crash-resilient persistence via an Append-Only File (AOF) logger that writes sequential mutations to disk for deterministic state replay on startup.",
       ],
       link: "https://github.com/yanaix10/mini-redis",
@@ -72,7 +101,7 @@ export const siteConfig = {
       description:
         "Zero-dependency peer-to-peer file transfer engine built with pure Go and Vanilla JS, containerized with Docker for frictionless cross-device transfers.",
       points: [
-        "<strong>Zero-Dependency Transfer Architecture:</strong> Developed a lightweight, high-throughput file transfer server in pure Go with standard library HTTP/WebSocket primitives and zero external package dependencies, packaged in a minimal Docker container.",
+        "<strong>Zero-Dependency Transfer Architecture:</strong> Developed a lightweight, high-throughput file transfer server in pure Go using standard library HTTP/WebSocket primitives and zero external package dependencies, packaged in a minimal Docker container.",
         "<strong>Instant PIN & QR Handshake:</strong> Engineered sub-second device pairing using ephemeral 4-character session PINs and dynamic QR codes with single-use cryptographic access tokens to eliminate account/login barriers.",
         "<strong>Burn-After-Reading Lifecycle:</strong> Implemented strict data privacy with immediate file shredding from disk upon download completion and an asynchronous goroutine background cleaner enforcing a strict 5-minute TTL.",
       ],
@@ -80,35 +109,6 @@ export const siteConfig = {
       github: "https://github.com/yanaix10/fileShare",
       demo: null,
       skills: ["Go", "Docker", "JavaScript", "Linux", "HTML5"],
-    },
-    {
-      name: "SkillSphere: Real-Time Coding Arena",
-      description:
-        "1v1 competitive coding challenge system featuring sub-100ms real-time editor synchronization and sandboxed multi-language code execution.",
-      points: [
-        "<strong>Sub-100ms Real-Time Synchronization:</strong> Architected low-latency WebSocket communication via Socket.io to sync live code keystrokes, editor state, and match events with sub-100ms latency.",
-        "<strong>Sandboxed Code Execution:</strong> Integrated Monaco Editor with isolated execution sandboxes (Piston API) to run and validate test cases across multiple programming languages under strict resource constraints.",
-        "<strong>Matchmaking & State Management:</strong> Built matchmaking lobbies with Elo rating calculations, synchronized match timers, and MongoDB schemas tracking live competitive duel statistics.",
-      ],
-      link: "https://xskillsphere.vercel.app/",
-      github: "https://github.com/yanaix10/Skill-Sphere-",
-      demo: "https://xskillsphere.vercel.app/",
-      inProgress: true,
-      skills: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
-    },
-    {
-      name: "Doodle.io: Collaborative Canvas Game",
-      description:
-        "Multiplayer collaborative drawing and guessing game featuring low-latency canvas stroke broadcasting and fuzzy guess matching.",
-      points: [
-        "<strong>Sub-50ms Canvas Broadcasting:</strong> Engineered real-time vector coordinate serialization over WebSockets (Socket.io) to synchronize brush strokes, colors, and canvas resets with sub-50ms latency.",
-        "<strong>Fuzzy Match Scoring:</strong> Implemented a Levenshtein distance string-matching algorithm to provide instant close-guess feedback, typo tolerance, and progressive clue reveals.",
-        "<strong>Session & Game Loop Management:</strong> Designed an in-memory room management engine supporting concurrent game lobbies, turn-based round timers, score tracking, and automated bot practice rooms.",
-      ],
-      link: "https://doodle-io-lake.vercel.app/",
-      github: "https://github.com/yanaix10/Doodle.io",
-      demo: "https://doodle-io-lake.vercel.app/",
-      skills: ["React", "Node.js", "Socket.io", "Express", "HTML5 Canvas"],
     },
   ],
   openSourceContributions: [
