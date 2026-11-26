@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Naitik Yadav",
-  title: "Full Stack Developer",
+  title: "Backend & Systems Enthusiast | Full-Stack Developer",
   description: "Portfolio website of Naitik Yadav",
   accentColor: "#6366f1",
   social: {
@@ -21,6 +21,8 @@ export const siteConfig = {
     "Node.js",
     "Express.js",
     "MongoDB",
+    "PostgreSQL",
+    "MySQL",
     "Firebase",
     "React",
     "Tailwind CSS",
@@ -28,10 +30,13 @@ export const siteConfig = {
     "HTML5",
     "CSS3",
     "Linux",
+    "Docker",
     "Git",
     "GitHub",
+    "Postman",
     "CMake",
     "Socket.io",
+    "Playwright",
   ],
   projects: [
     {
@@ -90,6 +95,20 @@ export const siteConfig = {
       github: "https://github.com/yanaix10/mini-redis",
       demo: null,
       skills: ["C++", "POSIX Threads", "CMake", "Concurrency", "Sockets"],
+    },
+    {
+      name: "fileShare: Ephemeral Cross-Device Transfer",
+      description:
+        "Zero-dependency peer-to-peer file transfer engine built with pure Go and Vanilla JS, containerized with Docker for frictionless cross-device transfers.",
+      points: [
+        "<strong>Zero-Dependency Transfer Architecture:</strong> Developed a lightweight, high-throughput file transfer server in pure Go using standard library HTTP/WebSocket primitives and zero external package dependencies, packaged in a minimal Docker container.",
+        "<strong>Instant PIN & QR Handshake:</strong> Engineered sub-second device pairing using ephemeral 4-character session PINs and dynamic QR codes with single-use cryptographic access tokens to eliminate account/login barriers.",
+        "<strong>Burn-After-Reading Lifecycle:</strong> Implemented strict data privacy with immediate file shredding from disk upon download completion and an asynchronous goroutine background cleaner enforcing a strict 5-minute TTL.",
+      ],
+      link: "https://github.com/yanaix10/fileShare",
+      github: "https://github.com/yanaix10/fileShare",
+      demo: null,
+      skills: ["Go", "Docker", "JavaScript", "Linux", "HTML5"],
     },
   ],
   openSourceContributions: [
